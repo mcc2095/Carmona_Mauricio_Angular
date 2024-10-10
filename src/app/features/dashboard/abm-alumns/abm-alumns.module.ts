@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AlumnsRoutingModule } from './alumns-routing.module';
-import { AlumnsComponent } from './alumns.component';
+import { AbmAlumnsRoutingModule } from './abm-alumns-routing.module';
+import { AbmAlumnsComponent } from './abm-alumns.component';
 import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    AlumnsComponent
+    AbmAlumnsComponent
   ],
   imports: [
     CommonModule,
-    AlumnsRoutingModule,
+    AbmAlumnsRoutingModule,
     SharedModule
   ],
   exports: [
-    AlumnsComponent
-    
+    AbmAlumnsComponent
   ]
 })
-export class AlumnsModule { }
+export class AbmAlumnsModule { }
