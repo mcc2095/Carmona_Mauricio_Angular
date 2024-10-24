@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AlumnsDialogComponent } from './alumns-d/alumns-d.component.js';
-import { Alumns } from './models/model.js';
+import { AlumnsDialogComponent } from './alumns-dialog/alumns-dialog.component.js';
+import { Alumn } from './models/model.js';
 
-const ELEMENT_DATA: Alumns[] = [
+const ELEMENT_DATA: Alumn[] = [
   {
     id: '0001',
     firstName: 'Pepe',
@@ -35,7 +35,7 @@ export class AlumnsComponent {
     }
   }
 
-  openModal(editingAlumns?: Alumns): void {
+  openModal(editingAlumns?: Alumn): void {
     this.matDialog
       .open(AlumnsDialogComponent, {
         data: {

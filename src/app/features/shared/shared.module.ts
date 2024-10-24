@@ -11,22 +11,39 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 
+import { AlumnsFullNamePipe } from './pipe/alumns-name.pipe';
+
+import { ColorDirective } from './directives/color.directive';
+import { RepeatDirective } from './directives/repeat.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [AlumnsFullNamePipe, ColorDirective, RepeatDirective],
   imports: [CommonModule],
   exports: [
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatListModule,
+    MatToolbarModule,
     MatDatepickerModule,
     MatDialogModule,
     MatTableModule,
-],
+    MatSidenavModule,
+    AlumnsFullNamePipe,
+    ColorDirective,
+    RepeatDirective,
+  ],
+
 })
 export class SharedModule {}

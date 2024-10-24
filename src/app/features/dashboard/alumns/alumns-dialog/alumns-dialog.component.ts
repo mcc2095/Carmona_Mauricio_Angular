@@ -2,10 +2,10 @@ import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { generateRandomString } from '../../../shared/utils';
-import { Alumns } from '../models/model';
+import { Alumn } from '../models/model';
 
-interface AlumnsDialogData {
-  editingAlumns?: Alumns;
+interface AlumnDialogData {
+  editingAlumns?: Alumn;
 }
 
 @Component({
@@ -18,12 +18,12 @@ openModal() {
 throw new Error('Method not implemented.');
 }
   AlumnsForm: FormGroup;
-dataSource: any;
+  dataSource: any;
 
   constructor(
     private matDialogRef: MatDialogRef<AlumnsDialogComponent>,
     private formBuilder: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public data?: AlumnsDialogData
+    @Inject(MAT_DIALOG_DATA) public data?: AlumnDialogData
   ) {
     this.AlumnsForm = this.formBuilder.group({
       firstName: [null, [Validators.required]],
